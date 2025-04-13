@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
 import { UsersModule } from './users/users.module';
 import { User } from './users/user.entity';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -20,6 +21,7 @@ import { User } from './users/user.entity';
     }),
     ProductModule,
     UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
